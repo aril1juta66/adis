@@ -1,0 +1,108 @@
+.container {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.birthday-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 24px;
+  text-decoration: none;
+  background-color: #2796ff;
+  color: #000000;
+  border-radius: 8px;
+  transition: background-color 0.3s ease; /* Transisi warna latar belakang */
+}
+
+.birthday-button:hover {
+  background-color: #2235e0; /* Warna latar belakang saat hover */
+}
+
+.balloons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1;
+}
+
+.balloon {
+  position: relative;
+  width: 80px;
+  height: 120px;
+  background-color: rgb(var(--color-red), var(--color-green), var(--color-blue)); /* Warna balon */
+  border-radius: 50%; /* Bentuk melingkar */
+  margin: 10px;
+  opacity: 0;
+  transform: translateY(0%);
+  animation: balloonAnim 10s linear forwards; /* Animasi balon */
+}
+
+.string {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: #333; /* Warna tali */
+}
+
+.balloon-1 {
+  width: 60px;
+  height: 90px;
+}
+
+.balloon-2 {
+  width: 90px;
+  height: 135px;
+}
+
+.balloon-3 {
+  width: 100px;
+  height: 150px;
+}
+
+.balloon-4 {
+  width: 70px;
+  height: 105px;
+}
+
+.balloon-5 {
+  width: 120px;
+  height: 180px;
+}
+
+.balloon-6 {
+  width: 80px;
+  height: 120px;
+}
+
+.balloon-7 {
+  width: 110px;
+  height: 165px;
+}
+
+@keyframes balloonAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-100vh);
+  }
+}
